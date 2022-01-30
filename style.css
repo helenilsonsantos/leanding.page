@@ -1,0 +1,342 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #EAF1F2;
+    
+}
+
+.cabecalho_fixo {
+    position: fixed;
+}
+
+.cabecalho {
+    background-color: #261132;
+    color: #FFF;
+    
+}
+
+.cabecalho_I {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px;
+    border-bottom: #D7AF70 solid 1px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+#menu {
+    padding: 15px;
+    cursor: pointer;
+}
+
+#menu:hover {
+    background-color: #A41623;
+    border-radius: 5px;
+}
+
+.cabecalho_II {
+    display: grid;
+    height: calc(100vh - 90px);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.chamada {
+    align-self:flex-end;
+    justify-self: center;
+    border-bottom: #D7AF70 solid 1px;
+    
+}
+#chamada {
+    padding: 15px;
+    font-size: 30px;
+    text-align: center;
+}
+
+#linkpro {
+    font-family: 'Panton-BlackCaps';
+}
+
+.botao_chamada {
+    justify-self: center;
+}
+
+#botao_chamada {
+    background-color: #A41623;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    color: #FFF;
+    margin: 15px;
+    text-align: center;
+    justify-self: center;
+}
+
+#botao_chamada:hover {
+    background-color: #A41623;
+    color: #FFF;
+    transform: scale(110%);
+    transition-duration: 1s;
+    text-align: center;
+    justify-self: center;
+}
+
+.foguete {
+    padding: 30px;
+    align-self: center;
+    justify-self: center;
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    transform: scale(120%);
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1) ease-in-out;
+    transition-duration: 3s;
+    transition-delay: 0,2s;
+    animation-iteration-count:infinite;
+    
+}
+
+@media (max-width: 1000px) {
+
+    .menu{
+        display: none;
+    }
+    .cabecalho_II {
+        height: calc(100vh - 90px);
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        margin: 0px;
+    }
+    .chamada {
+        margin: 0;
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;
+    }
+    #chamada {
+        font-size: 13px;
+    } 
+    .botao_chamada {
+        margin: 0;
+        grid-row: 3 / 4;
+        grid-column: 1 / 3;
+    }   
+    .foguete {
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+        padding: 15px;
+        align-self: center;
+        justify-self: center;
+    }
+
+    #foguete {
+        width: 150px;
+        margin: 0;
+    }
+}
+
+/* ESTILIZAÇÃO DA INTRODUÇÃO*/
+
+.introducao {
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    align-items: center;
+    max-width: 1500px;
+    margin: auto;
+}
+
+#introducao {
+    line-height: 200%;
+    text-align: justify;
+    padding: 15px;
+    color: #261132;
+}
+
+.video {
+    border: #D7AF70 solid 3px;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 10px 5px 10px #261132;
+}
+
+.video:hover {
+    transform: scale(105%);
+    transition-duration: 1s;
+}
+
+@media (max-width: 1000px) {
+    .introducao {
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+    }
+    #video {
+        width: 320px;
+        height: 200px;
+    }
+}
+
+/* ESTILIZAÇÃO DA SESSÃO SISTEMA COMPLETO*/
+#titulo {
+    font-family: 'Panton-BlackCaps';
+    color: #261132;
+    padding: 15px;
+    padding-left: 30px;
+    padding-bottom: 0px;
+    border-bottom: #261132 solid 1px;
+}
+
+.sistema_completo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 5fr;
+    max-width: 1500px;
+    margin: auto;   
+}
+
+.tutulo {
+    grid-column: 1 / 1;
+}
+
+.relatorio {
+    grid-column: 1 / 2;
+    align-self: center;
+    justify-self: center;
+    padding: 15px;
+}
+
+.pontos {
+    align-self: center;
+    text-align: justify;
+    line-height: 200%;
+    padding-right: 20px;
+    color: #261132;
+}
+
+@media (max-width: 1000px) {
+    .sistema_completo {
+        display: flex;
+        flex-direction: column;
+    }
+    .pontos {
+        margin: 5px;
+        padding: 10px;
+    }
+    .titulo {
+        align-items: center;
+        text-align: center;
+        font-size: 13px;
+        margin-top: 20px;
+    }
+    #relatorio {
+        width: 300px;
+    }
+}
+
+/* ESTILIZAÇÃO DA SESSÃO TELA DO CAIXA*/
+.pontos_esquerda {
+    align-self: center;
+    text-align: justify;
+    line-height: 200%;
+    padding-left: 30px;
+    color: #261132;
+    grid-column: 1 / 2;
+    text-align: justify;
+}
+
+.recursos_caixa {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 5fr;
+    max-width: 1500px;
+    margin: auto;
+}
+
+.caixa {
+    grid-column: 2 / 3;
+    align-self: center;
+    justify-self: center;
+}
+
+@media (max-width: 1000px) {
+    .recursos_caixa {
+        display: flex;
+        flex-direction: column;
+    }
+    #caixa {
+        width: 300px;
+    }
+
+    .pontos_esquerda {
+        margin: 5px;
+        padding: 10px;
+    }
+    
+}
+
+/* ESTILIZAÇÃO DA SESSÃO BARES E RESTAURANTES*/
+.bares_restaurantes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 10fr;
+    max-width: 1500px;
+    margin: auto;
+}
+
+.restaurante {
+    grid-column: 1 / 2;
+    padding: 20px;
+    align-self: center;
+    justify-self: center;
+}
+
+@media (max-width: 1000px) {
+    .bares_restaurantes {
+        display: flex;
+        flex-direction: column;
+    }
+    #restaurante {
+        width: 300px;
+    }
+    #titulo {
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+/* ESTILIZAÇÃO DA SESSÃO LOJA VIRTUAL*/
+.loja_virtual {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 5fr;
+    padding-bottom: 20px;
+    max-width: 1500px;
+    margin: auto;
+}
+
+.tray {
+    grid-column: 2 / 3;
+    align-self: center;
+    justify-self: center;
+    box-shadow: 10px 5px 10px #261132;
+}
+@media (max-width: 1000px) {
+    .loja_virtual {
+        display: flex;
+        flex-direction: column;
+    }
+    #tray {
+        width: 300px;
+    }
+}
